@@ -1,0 +1,170 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    color: #4CAF50;
+    text-align: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+/* Формы */
+form {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical; /* Позволяет изменять размер по вертикали */
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Ссылки */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #4CAF50;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Стили списка */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li p {
+    margin: 5px 0; /* Отступы для описания */
+    font-size: 0.95rem; /* Меньший шрифт для описания */
+    color: #666; /* Цвет описания */
+}
+
+li strong {
+    font-weight: bold;
+}
+
+li form {
+    display: inline;
+}
+
+li button {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+
+/* Сообщение */
+.message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e1f5e6;
+    color: #2e7d32;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.definition {
+    white-space: pre-line;
+}
+
+.word-container {
+    margin-bottom: 10px; /* Отступ между словом и описанием */
+}
+
+li {
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.word {
+    display: block; /* Делаем элемент блочным для центровки */
+    font-size: 2rem; /* Увеличиваем размер шрифта */
+    text-align: center; /* Центрируем текст */
+    margin-bottom: 5px; /* Отступ снизу для отделения от описания */
+    color: #4CAF50; /* Цвет текста (по желанию) */
+}
+
+.actions {
+    display: flex; /* Используем Flexbox для вертикального расположения */
+    flex-direction: column; /* Вертикальное размещение элементов */
+    align-items: flex-end; /* Выровнять элементы по правому краю */
+    margin-top: 15px; /* Отступ сверху для отделения от описания */
+    margin-left: auto; /* Сдвинуть в правую часть родительского элемента */
+    width: 70%; /* Занимает всю ширину родительского элемента */
+    text-align: right; /* Выровнять текст внутри контейнера по правому краю */
+}
+
+.actions a {
+    margin-top: 5px; /* Отступ между кнопкой и ссылкой */
+    text-decoration: none; /* Убираем подчеркивание у ссылки */
+    color: #4CAF50; /* Цвет ссылки */
+    font-weight: bold; /* Жирный шрифт для ссылки */
+}
+
+.actions button {
+    margin-bottom: 5px; /* Отступ между кнопкой и ссылкой */
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Найденные результаты</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Найденные результаты</h1>
+
+        {% if results %}
+            <ul>
+                {% for item in results %}
+                <li>
+                    <div class="word-container"></div>
+                        <strong class="word">{{ item.word }}</strong>
+                        <p>{{ item.definition | replace("\n", "<br>") | safe}}</p>
+                    </div>
+                    <div class="actions">
+                        <form action="/delete_word" method="post">
+                            <input type="hidden" name="word_id" value="{{ item.id }}">
+                            <button type="submit">Удалить</button>
+                        </form>
+                        <a href="/">Вернуться к словарю</a>
+                        <a href="/edit_word/{{ item.id }}">Редактировани</a>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

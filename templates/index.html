@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Словарь</title>
+        <link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Словарь</h1>
+            {% if message %}
+                <div class="message">{{ message }}</div>
+            {% endif %}
+            <p>Всего слов в словаре: <strong>{{ word_count }}</strong></p>
+            <h2>Добавьте новое слово</h2>
+            <form action="/add_word" method="post">
+                <label for="word">Слово:</label>
+                <input type="text" id="word" name="word" required>
+                <label for="definition">Описание:</label>
+                <textarea id="definition" name="definition" rows="4" required></textarea>
+                <button type="submit">Добавить слово</button>
+            </form>
+            <h2>Поиск слова</h2>
+            <form action="/search_word" method="get">
+                <label for="query">Введите слово:</label>
+                <input type="text" id="query" name="query" required>
+                <button type="submit">Поиск</button>
+            </form>
+        </div>
+    </body>
+</html>

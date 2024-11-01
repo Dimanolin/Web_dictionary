@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменить слово</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Изменить слово</h1>
+        <form action="/update_word/{{ word.id }}" method="post">
+            <label for="word">Слово:</label>
+            <input type="text" id="word" name="word" value="{{ word.word }}" required>
+            <label for="definition">Описание:</label>
+            <textarea id="definition" name="definition" required>{{ word.definition }}</textarea>
+            <button type="submit">Изменить</button>
+        </form>
+    </div>
+    <a href="/">Вернуться в словарь</a>
+</body>
+</html>
